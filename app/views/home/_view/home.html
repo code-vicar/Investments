@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            Balance Sheet (in millions)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Accounts Payable: {{balancesheet.accountsPayable | currency}}
+        </div>
+        <div class="col-md-6">
+            <span class="test-class">Aside</span>
+        </div>
+    </div>
+    <div class="row" ng-repeat="incomeStatement in incomeStatements">
+        <div class="col-md-12">Symbol: {{ incomeStatement.symbol }}</div>
+        <div class="col-md-12">Timeframe: {{ incomeStatement.timeframe }}</div>
+        <div class="col-md-12">Period: {{ incomeStatement.period }}</div>
+        
+        <div class="col-md-12" >
+            IncomeTaxExpense: {{incomeStatement.IncomeTaxExpense}}
+        </div>
+    </div>
+</div>
